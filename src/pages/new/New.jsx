@@ -1,11 +1,11 @@
-import "./login.scss"
+import "./new.scss"
 
-const Login = () => {
+const New = () => {
     return (
-        <div className="home">
-            login
+        <div className="new">
+            new
         </div>
     )
 }
 
-export default Login
+export default New

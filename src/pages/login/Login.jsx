@@ -1,11 +1,11 @@
-import "./list.scss"
+import "./login.scss"
 
-const List = () => {
+const Login = () => {
     return (
-        <div className="home">
-            list
+        <div className="login">
+            login
         </div>
     )
 }
 
-export default List
+export default Login

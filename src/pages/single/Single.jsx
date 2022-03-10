@@ -1,11 +1,11 @@
-import "./new.scss"
+import "./single.scss"
 
-const New = () => {
+const Single = () => {
     return (
-        <div className="new">
+        <div className="single">
             new
         </div>
     )
 }
 
-export default New
+export default Single
