@@ -1,7 +1,7 @@
-.list{
-  background-color: rebeccapurple;
-  .title {
-    color: white;
+.list {
+  display: flex;
+  width: 100%;
+  .listContainer {
+    flex: 6;
   }
 }
-

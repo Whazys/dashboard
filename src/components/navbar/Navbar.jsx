@@ -1,46 +1,52 @@
-import "./navbar.scss"
-import {SearchOutlined} from "@mui/icons-material";
-import {LanguageOutlined} from "@mui/icons-material";
-import {DarkModeOutlined} from "@mui/icons-material";
-import {FullscreenExitOutlined} from "@mui/icons-material";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import {ChatBubbleOutlined} from "@mui/icons-material";
-import {ListAltOutlined} from "@mui/icons-material";
-
-
+import "./navbar.scss";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+    const { dispatch } = useContext(DarkModeContext);
+
     return (
-        <div className='navbar'>
+        <div className="navbar">
             <div className="wrapper">
                 <div className="search">
-                    <input type="text" placeholder="Search..."/>
-                    <SearchOutlined/>
+                    <input type="text" placeholder="Search..." />
+                    <SearchOutlinedIcon />
                 </div>
                 <div className="items">
                     <div className="item">
-                        <LanguageOutlined className="icon"/>
+                        <LanguageOutlinedIcon className="icon" />
+                        English
                     </div>
                     <div className="item">
-                        <DarkModeOutlined className="icon"/>
+                        <DarkModeOutlinedIcon
+                            className="icon"
+                            onClick={() => dispatch({ type: "TOGGLE" })}
+                        />
                     </div>
                     <div className="item">
-                        <FullscreenExitOutlined className="icon"/>
+                        <FullscreenExitOutlinedIcon className="icon" />
                     </div>
                     <div className="item">
-                        <NotificationsNoneIcon className="icon"/>
+                        <NotificationsNoneOutlinedIcon className="icon" />
                         <div className="counter">1</div>
                     </div>
                     <div className="item">
-                        <ChatBubbleOutlined className="icon"/>
+                        <ChatBubbleOutlineOutlinedIcon className="icon" />
                         <div className="counter">2</div>
                     </div>
                     <div className="item">
-                        <ListAltOutlined className="icon"/>
+                        <ListOutlinedIcon className="icon" />
                     </div>
                     <div className="item">
                         <img
-                            src="https://images.pexels.com/photos/11532600/pexels-photo-11532600.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                            src="https://images.pexels.com/photos/941693/pexels-photo-941693.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                             alt=""
                             className="avatar"
                         />
@@ -48,7 +54,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
